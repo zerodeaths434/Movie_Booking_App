@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const AuthRoutes = require("./routes/auth");
 const movieRoutes = require("./routes/movies");
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 
