@@ -31,6 +31,6 @@ mongoose
 app.use("/auth", AuthRoutes);
 app.use("/api", movieRoutes);
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
   console.log("Backend Server Running");
 });
