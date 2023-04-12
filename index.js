@@ -32,5 +32,5 @@ app.use("/auth", AuthRoutes);
 app.use("/api", movieRoutes);
 
 app.listen(PORT, () => {
-  console.log("Backend Server Running");
+  console.log(`Server Started at ${PORT}`);
 });
