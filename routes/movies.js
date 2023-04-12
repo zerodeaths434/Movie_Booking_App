@@ -13,6 +13,10 @@ router.get("/movies", (req, res) => {
   }
 });
 
+router.get("/hello", (req, res) => {
+  res.send(<h1>Hello</h1>);
+});
+
 router.get("/genres", (req, res) => {
   try {
     fetch(
