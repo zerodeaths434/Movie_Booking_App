@@ -4,7 +4,7 @@ const router = express.Router();
 router.get("/movies", (req, res) => {
   try {
     fetch(
-      `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.MOVIE_API_KEY}&language=en-US&page=1&region=GB`
+      `https://api.themoviedb.org/3/movie/now_playing?api_key=5e076fda2c2147597642fd3a261ad883&language=en-US&page=1&region=GB`
     )
       .then((res) => res.json())
       .then((data) => res.status(200).json(data));
@@ -20,7 +20,7 @@ router.get("/hello", (req, res) => {
 router.get("/genres", (req, res) => {
   try {
     fetch(
-      `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.MOVIE_API_KEY}&language=en-US`
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=5e076fda2c2147597642fd3a261ad883&language=en-US`
     )
       .then((res) => res.json())
       .then((data) => res.status(200).json(data));
@@ -32,7 +32,7 @@ router.get("/genres", (req, res) => {
 router.get("/premieremovies", (req, res) => {
   try {
     fetch(
-      `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.MOVIE_API_KEY}&language=en-US&page=1&region=GB`
+      `https://api.themoviedb.org/3/movie/upcoming?api_key=5e076fda2c2147597642fd3a261ad883&language=en-US&page=1&region=GB`
     )
       .then((res) => res.json())
       .then((data) => res.status(200).json(data));
