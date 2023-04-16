@@ -4,16 +4,11 @@ const router = express.Router();
 
 router.get("/movies", async (req, res) => {
   try {
-    const res = await axios.get(
-      `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.MOVIE_API_KEY}&language=en-US&page=1&region=GB`
-    );
-    return await res.status(200).json();
-
-    /*fetch(
+    fetch(
       `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.MOVIE_API_KEY}&language=en-US&page=1&region=GB`
     )
       .then((res) => res.json())
-      .then((data) => res.status(200).json(data));*/
+      .then((data) => res.status(200).json(data));
   } catch (err) {
     res.status(500).json(err);
   }
