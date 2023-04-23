@@ -19,7 +19,7 @@ const limiter = rateLimit({
 
 app.use(
   cors({
-    origin: ["https://cinebook.netlify.app/movie-details"],
+    origin: "https://cinebook.netlify.app/movie-details/594767",
   })
 );
 app.use(limiter);
