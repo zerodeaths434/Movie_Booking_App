@@ -21,7 +21,7 @@ app.use(
   cors({
     origin: [
       "https://cinebook.netlify.app",
-      "https://cinebook.netlify.app/movie-details",
+      "https://cinebook.netlify.app/movie-details/:id",
     ],
   })
 );
